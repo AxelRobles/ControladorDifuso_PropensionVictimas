@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     RadioButton respuesta5_radio;
     float propension;
     Button buttonFinalizar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +43,11 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String message = "Text I want to share.";
+                String message = "https://www.dropbox.com/s/fd4971pyz98xuvf/ControladorDifuso_Propension.apk?dl=0";
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType("text/plain");
                 share.putExtra(Intent.EXTRA_TEXT, message);
-
-                startActivity(Intent.createChooser(share, "Title of the dialog the system will open"));
+                startActivity(Intent.createChooser(share, "link de descarga"));
             }
         });
     }
@@ -153,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, resultado, Toast.LENGTH_LONG).show();
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
